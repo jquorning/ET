@@ -195,7 +195,7 @@ package et_conductor_segment is
 	with record
 		case filled is
 			when NO => 
-				-- the line width of the circumfence:
+				-- the line width of the circumference:
 				border_width : type_track_width := type_track_width'first;
 
 			when YES =>

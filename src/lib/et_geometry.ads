@@ -132,7 +132,7 @@ package et_geometry is
 	filled_default : constant type_filled := NO;
 
 
-	-- FILL STYLE OF OBJECTS WITH A CLOSED CIRCUMFENCE		
+	-- FILL STYLE OF OBJECTS WITH A CLOSED CIRCUMFERENCE		
 	keyword_fill_style : constant string := "fill_style";	
 	type type_fill_style is (SOLID, HATCHED);
 	fill_style_default : constant type_fill_style := SOLID;

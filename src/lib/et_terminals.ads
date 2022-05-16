@@ -104,7 +104,7 @@ package et_terminals is
 -- PLATED MILLINGS OF TERMINALS
 	
 	-- Plated millings as used by terminals. 
-	-- These structures have a closed circumfence.
+	-- These structures have a closed circumference.
 	type type_plated_millings is new type_contour with null record;
 	-- CS other properties of plated millings
 	

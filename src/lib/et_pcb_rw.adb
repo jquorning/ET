@@ -870,7 +870,7 @@ package body et_pcb_rw is
 		circle				: in type_circle;
 		filled				: in type_filled;
 		fill_style			: in type_fill_style;
-		circumfence_width	: in type_general_line_width;
+		circumference_width	: in type_general_line_width;
 		hatching			: in type_hatching)
 		return type_fillable_circle is
 
@@ -880,7 +880,7 @@ package body et_pcb_rw is
 				return (circle with
 					filled			=> NO,
 					fill_style		=> fill_style,
-					border_width	=> circumfence_width);
+					border_width	=> circumference_width);
 				
 			when YES =>
 				case fill_style is
@@ -905,7 +905,7 @@ package body et_pcb_rw is
 			circle 				=> type_circle (board_circle),
 			filled				=> board_filled,
 			fill_style			=> board_fill_style,
-			circumfence_width	=> board_line_width,
+			circumference_width	=> board_line_width,
 			hatching			=> board_hatching);
 	end;
 

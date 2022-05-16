@@ -467,7 +467,7 @@ is
 					-- fill style like CUTOUT or SOLID. HATCHED is not allowed here:
 						if is_number (f (7)) then
 
-							-- Circle is not filled and has a circumfence line width
+							-- Circle is not filled and has a circumference line width
 							-- specified in field 7.
 							draw_silk_screen_circle (
 								module_name 	=> module,
@@ -619,7 +619,7 @@ is
 					-- fill style like CUTOUT or SOLID. HATCHED is not allowed here:
 						if is_number (f (7)) then
 
-							-- Circle is not filled and has a circumfence line width
+							-- Circle is not filled and has a circumference line width
 							-- specified in field 7.
 							draw_assy_doc_circle (
 								module_name 	=> module,
@@ -1065,7 +1065,7 @@ is
 					-- fill style like CUTOUT or SOLID. HATCHED is not allowed here:
 						if is_number (f (7)) then
 
-							-- Circle is not filled and has a circumfence line width
+							-- Circle is not filled and has a circumference line width
 							-- specified in field 7.
 							draw_stop_circle (
 								module_name 	=> module,
@@ -1214,7 +1214,7 @@ is
 					-- fill style like CUTOUT or SOLID. HATCHED is not allowed here:
 						if is_number (f (7)) then
 
-							-- Circle is not filled and has a circumfence line width
+							-- Circle is not filled and has a circumference line width
 							-- specified in field 7.
 							draw_stencil_circle (
 								module_name 	=> module,

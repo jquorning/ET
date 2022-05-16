@@ -3554,9 +3554,9 @@ package body et_geometry_2 is
 								--log (text => "i after center");
 								compare_start_and_end_point;
 							else
-								-- intersection on circumfence between point and center of arc
+								-- intersection on circumference between point and center of arc
 								--put_line ("i before center");
-								--put_line ("p betweeen circumfence and center");
+								--put_line ("p betweeen circumference and center");
 								like_circle;
 							end if;
 							
@@ -3569,7 +3569,7 @@ package body et_geometry_2 is
 						--put_line ("two");
 						
 						-- line intersects the virtual circle twice on
-						-- its circumfence. But the intersection nearest
+						-- its circumference. But the intersection nearest
 						-- to point is relevant:
 						like_circle;
 						
@@ -3598,7 +3598,7 @@ package body et_geometry_2 is
 								--put_line ("i after center");
 								compare_start_and_end_point;
 							else
-								-- point is between circumfence and center of arc
+								-- point is between circumference and center of arc
 								--put_line ("i before center");
 								
 								result := DPC;
@@ -3614,8 +3614,8 @@ package body et_geometry_2 is
 
 					when TWO_EXIST =>
 						-- treat the arc like a circle and compute distance point to circle:
-						--result := get_distance_to_circumfence (point, (arc.center, radius));
-						result := get_distance_to_circumfence ((arc.center, radius), point);
+						--result := get_distance_to_circumference (point, (arc.center, radius));
+						result := get_distance_to_circumference ((arc.center, radius), point);
 						
 				end case;				
 			end if;				
@@ -3736,9 +3736,9 @@ package body et_geometry_2 is
 								----log (text => "i after center");
 								--compare_start_and_end_point;
 							--else
-								---- intersection on circumfence between point and center of arc
+								---- intersection on circumference between point and center of arc
 								----put_line ("i before center");
-								----put_line ("p betweeen circumfence and center");
+								----put_line ("p betweeen circumference and center");
 								--like_circle;
 							--end if;
 							
@@ -3751,7 +3751,7 @@ package body et_geometry_2 is
 						----put_line ("two");
 						
 						---- line intersects the virtual circle twice on
-						---- its circumfence. But the intersection nearest
+						---- its circumference. But the intersection nearest
 						---- to point is relevant:
 						--like_circle;
 						
@@ -3780,7 +3780,7 @@ package body et_geometry_2 is
 								----put_line ("i after center");
 								--compare_start_and_end_point;
 							--else
-								---- point is between circumfence and center of arc
+								---- point is between circumference and center of arc
 								----put_line ("i before center");
 								
 								--result := DPC;
@@ -3796,7 +3796,7 @@ package body et_geometry_2 is
 
 					--when TWO_EXIST =>
 						---- treat the arc like a circle and compute distance point to circle:
-						--result := get_distance_to_circumfence (point, (arc.center, radius));
+						--result := get_distance_to_circumference (point, (arc.center, radius));
 						
 				--end case;				
 			--end if;				
@@ -4190,14 +4190,14 @@ package body et_geometry_2 is
 				--& " point" & to_string (point)
 				--& " distance center to point" & to_string (distance_center_to_point));
 
-		-- First test whether the given point is on the circumfence of
+		-- First test whether the given point is on the circumference of
 		-- a virtual circle. The circle has the same radius as the arc:
 		--put_line ("delta:" & to_string (distance_center_to_point - arc_angles.radius));
 		
 		if abs (distance_center_to_point - arc_angles.radius) <= rounding_threshold then
 		
-			-- Point is on circumfence of virtual circle.
-			--log (text => "on circumfence");
+			-- Point is on circumference of virtual circle.
+			--log (text => "on circumference");
 
 			--log (text => "S" & to_string (S));
 			--log (text => "E" & to_string (E));
@@ -4698,7 +4698,7 @@ package body et_geometry_2 is
 	--end split_circle;
 	
 
-	function get_distance_to_circumfence (
+	function get_distance_to_circumference (
 		circle	: in type_circle;
 		point	: in type_point)
 		return type_distance_polar
@@ -4708,7 +4708,7 @@ package body et_geometry_2 is
 		result := get_distance (circle.center, point);
 		set_absolute (result, circle.radius - get_absolute (result));
 		return result;
-	end get_distance_to_circumfence;
+	end get_distance_to_circumference;
 
 	
 	function get_shortest_distance (
@@ -4741,16 +4741,16 @@ package body et_geometry_2 is
 			-- Now the polar distance from point to center matters:
 			result := d_pc;
 
-			-- Since we are interested in the distance to the circumfence
+			-- Since we are interested in the distance to the circumference
 			-- the radius must be subtracted from the total distance:
 			set_absolute (result, get_absolute (d_pc) - circle.radius);
 			
-		else -- point inside circle or on circumfence
+		else -- point inside circle or on circumference
 
 			-- Now the polar distance from center to point matters:
 			result := d_cp;
 			
-			-- Since we are interested in the distance to the circumfence
+			-- Since we are interested in the distance to the circumference
 			-- the total distance must be subtracted from the radius:
 			set_absolute (result, circle.radius - get_absolute (d_pc));
 		end if;
@@ -4789,16 +4789,16 @@ package body et_geometry_2 is
 			---- Now the polar distance from point to center matters:
 			--result := d_pc;
 
-			---- Since we are interested in the distance to the circumfence
+			---- Since we are interested in the distance to the circumference
 			---- the radius must be subtracted from the total distance:
 			--set_absolute (result, get_absolute (d_pc) - circle.radius);
 			
-		--else -- point inside circle or on circumfence
+		--else -- point inside circle or on circumference
 
 			---- Now the polar distance from center to point matters:
 			--result := d_cp;
 			
-			---- Since we are interested in the distance to the circumfence
+			---- Since we are interested in the distance to the circumference
 			---- the total distance must be subtracted from the radius:
 			--set_absolute (result, circle.radius - get_absolute (d_pc));
 		--end if;
@@ -4871,7 +4871,7 @@ package body et_geometry_2 is
 	begin
 		if abs (DCP - circle.radius) <= type_float_internal (type_distance'small) then
 
-			-- Point is on circumfence of circle.
+			-- Point is on circumference of circle.
 			return true;
 		else
 			return false; 
@@ -4935,10 +4935,10 @@ package body et_geometry_2 is
 		--debug : constant boolean := false;
 		--debug : constant boolean := true;
 		
-		-- the distance from circumfence to start of line:
+		-- the distance from circumference to start of line:
 		ds : type_float_internal_positive;
 		
-		-- the distance from circumfence to end of line:
+		-- the distance from circumference to end of line:
 		de : type_float_internal_positive;
 
 		-- the distance from center perpendicular to line:
@@ -4980,7 +4980,7 @@ package body et_geometry_2 is
 			result := get_smallest (ds, de);
 		end if;
 		
-		-- We are interested in the distance of the circumfence to
+		-- We are interested in the distance of the circumference to
 		-- the line. Therefore the radius must be subtracted:
 		result := result - circle.radius;
 		

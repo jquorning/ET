@@ -143,7 +143,7 @@ package et_board_shapes_and_text is
 
 
 
--- HATCHING OF OBJECTS WITH CLOSED CIRCUMFENCE
+-- HATCHING OF OBJECTS WITH CLOSED CIRCUMFERENCE
 	keyword_hatching_line_width		: constant string := "hatching_line_width";
 	keyword_hatching_border_width	: constant string := "hatching_border_width";	
 	keyword_hatching_line_spacing	: constant string := "hatching_line_spacing";		
@@ -229,7 +229,7 @@ package et_board_shapes_and_text is
 	with record
 		case filled is
 			when NO => 
-				-- the line width of the circumfence:
+				-- the line width of the circumference:
 				border_width : type_general_line_width := type_general_line_width'first;
 
 			when YES =>

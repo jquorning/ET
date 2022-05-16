@@ -1601,7 +1601,7 @@ package et_geometry_2 is
 	-- The given line enters and leaves the arc/circle at some point and angle.
 	-- As the given line is a line vector, it has a direction. Imagine
 	-- sitting on this line as it enters/leveas the circle. 
-	-- The angle BETWEEN the line and the circle circumfence visible
+	-- The angle BETWEEN the line and the circle circumference visible
 	-- on your LEFT is the angle of intersection.
 	-- The angle of intersection is always greater zero and less than 180 degrees.
 	function get_intersection (
@@ -1696,10 +1696,10 @@ package et_geometry_2 is
 		--return type_arcs;
 
 	
-	-- Returns the distance of point to circumfence of circle.
-	-- Assumes the point is INSIDE the circle or ON the circumfence of the circle.
+	-- Returns the distance of point to circumference of circle.
+	-- Assumes the point is INSIDE the circle or ON the circumference of the circle.
 	-- The point must not be OUTSIDE the circle !
-	function get_distance_to_circumfence (
+	function get_distance_to_circumference (
 		circle	: in type_circle;
 		point	: in type_point)
 		return type_distance_polar;
@@ -1707,7 +1707,7 @@ package et_geometry_2 is
 	
 	-- Returns the shortest distance from the given point to the
 	-- given circle. The point may be inside or outside the circle.
-	-- However, the return is the distance to the circumfence of the circle.
+	-- However, the return is the distance to the circumference of the circle.
 	function get_shortest_distance (
 		circle	: in type_circle;
 		point	: in type_point)
@@ -1749,7 +1749,7 @@ package et_geometry_2 is
 		return type_boundaries;
 	
 	
-	-- Returns true if the given point sits on the given circle circumfence.
+	-- Returns true if the given point sits on the given circle circumference.
 	function on_circle (
 		circle		: in type_circle;
 		point		: in type_point)
@@ -1757,7 +1757,7 @@ package et_geometry_2 is
 
 	
 	-- Gives the status (inside/outside) of a point relative to a circle.
-	-- If the point lies exactly at the circumfence then the result is "outside".
+	-- If the point lies exactly at the circumference then the result is "outside".
 	function get_point_to_circle_status (
 		circle		: in type_circle;
 		point		: in type_point)

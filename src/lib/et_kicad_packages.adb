@@ -1750,7 +1750,7 @@ package body et_kicad_packages is
 
 				-- The point at the circle and its layer are now discarded
 				-- as the circle is converted back to its anchestor
-				-- and then optionally extended with the line width of the circumfence. 
+				-- and then optionally extended with the line width of the circumference. 
 				-- Thus a type_fillable_circle or a type_fillable_circle_solid
 				-- is formed and appended to the corresponding list of circles.
 				-- Filling circles is not supported by kicad -> default to no filling.

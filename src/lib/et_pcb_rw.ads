@@ -292,7 +292,7 @@ package et_pcb_rw is
 		circle				: in type_circle;
 		filled				: in type_filled;
 		fill_style			: in type_fill_style;
-		circumfence_width	: in type_general_line_width;
+		circumference_width	: in type_general_line_width;
 		hatching			: in type_hatching)
 		return type_fillable_circle;
 
