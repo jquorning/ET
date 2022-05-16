@@ -274,7 +274,7 @@ package body et_pcb_rw is
 	end write_circle_fillable;
 	
 
-	-- CS unify the follwing two procedures write_circle_conductor:
+	-- CS unify the following two procedures write_circle_conductor:
 	procedure write_circle_conductor (circle : in et_conductor_segment.type_conductor_circle) is begin
 		circle_begin;
 		write_circle (circle);

@@ -194,7 +194,7 @@ package et_netlists is
 	-- Returns the number of netchanger and submodule ports in the given net.
 
 	-- A primary net enforces its name on all subordinated secondary nets.
-	-- Primary nets are those which fulfil ALL follwing criteria:
+	-- Primary nets are those which fulfil ALL following criteria:
 	--  1. scope of net is LOCAL.
 	--  2. have no netchanger slave ports. Reason: Nets with slave ports always inherit the 
 	--     name of the net on the master port. 

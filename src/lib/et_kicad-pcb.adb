@@ -4730,7 +4730,7 @@ package body et_kicad.pcb is
 		-- As long as the position of reference and value is edited, everything is ok. But changing position
 		-- of a pad or an element in the silk screen is no good idea. The package in the board file would
 		-- then be no longer a copy of the generic package in the library ! 
-		-- The procedure in the follwing DOES NOT detect local modifications of component packages in the layout.
+		-- The procedure in the following DOES NOT detect local modifications of component packages in the layout.
 		-- We assume, the operator has left the packages in the board file as they are: just copies of packages in
 		-- the library.
 		-- Only the package position, reference position and value position are read and assigned to the

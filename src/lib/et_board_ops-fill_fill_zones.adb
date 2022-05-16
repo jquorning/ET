@@ -332,7 +332,7 @@ is
 		--for r in 1 .. rows_min loop
 
 			---- For the lowest fill line, the start point has already been
-			---- computed. For each of the follwing lines the start point
+			---- computed. For each of the following lines the start point
 			---- moves up by the effective line width (lines must overlap):
 			--if r > 1 then
 				--offset := to_distance_relative (set (

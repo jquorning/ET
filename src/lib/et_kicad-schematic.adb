@@ -4023,7 +4023,7 @@ package body et_kicad.schematic is
 			-- If still no match, comp_cursor is empty (no_element).
 			comp_cursor := components.find (component); -- TRANSISTOR_NPN
 
-			-- CS: the follwing should be executed if the import format is kicad_v4:
+			-- CS: the following should be executed if the import format is kicad_v4:
 			if comp_cursor = type_components_library.no_element then
 				comp_cursor := components.find (prepend_tilde (component)); -- ~TRANSISTOR_NPN
 				--CS: log ?
@@ -4581,7 +4581,7 @@ package body et_kicad.schematic is
 				use type_ports;
 				use et_import;
 				
--- NOTE: DO NOT REMOVE THE FOLLWING. MIGHT BE REQUIRED SOME DAY.
+-- NOTE: DO NOT REMOVE THE FOLLOWING. MIGHT BE REQUIRED SOME DAY.
 				
 -- 				function no_connection_flag_here return boolean is
 -- 				-- returns true once a no_connection_flag has been found at the port coordinates

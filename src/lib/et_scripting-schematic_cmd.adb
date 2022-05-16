@@ -2882,7 +2882,7 @@ begin -- schematic_cmd
 	-- Parse the command:
 	parse;
 	
-	-- In case parse throws an exception, then the follwing statements 
+	-- In case parse throws an exception, then the following statements 
 	-- will be skipped.
 	
 	-- In graphical mode and cmd_entry_mode SINGLE_CMD the flag

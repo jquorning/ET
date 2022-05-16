@@ -276,7 +276,7 @@ package body et_board_ops.tracks is
 	is
 		module_cursor : pac_generic_modules.cursor; -- points to the module being modified
 
-		-- This is going to be the segment we will insert. In the follwing it
+		-- This is going to be the segment we will insert. In the following it
 		-- will be tailored according to given terminal position, direction and length.
 		-- Finally it will be added to the list of line segments (via procedure add_named_track)
 		-- to the given net.
@@ -349,7 +349,7 @@ package body et_board_ops.tracks is
 	is
 		module_cursor : pac_generic_modules.cursor; -- points to the module being modified
 
-		-- This is going to be the segment we will insert. In the follwing it
+		-- This is going to be the segment we will insert. In the following it
 		-- will be tailored according to given terminal position, direction, axis and grid notches.
 		-- Finally it will be added to the list of line segments (via procedure add_named_track)
 		-- to the given net.
@@ -415,7 +415,7 @@ package body et_board_ops.tracks is
 	is		
 		module_cursor : pac_generic_modules.cursor; -- points to the module being modified
 
-		-- This is going to be the segment we will insert. In the follwing it
+		-- This is going to be the segment we will insert. In the following it
 		-- will be tailored according to given terminal position and end point.
 		-- Finally it will be added to the list of line segments (via procedure add_named_track)
 		-- to the given net.
@@ -476,7 +476,7 @@ package body et_board_ops.tracks is
 	is
 		module_cursor : pac_generic_modules.cursor; -- points to the module being modified
 
-		-- This is going to be the segment we will insert. In the follwing it
+		-- This is going to be the segment we will insert. In the following it
 		-- will be tailored according to given terminal position, axis and grid notches.
 		-- Finally it will be added to the list of line segments (via procedure add_named_track)
 		-- to the given net.

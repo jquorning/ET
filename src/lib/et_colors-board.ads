@@ -120,7 +120,7 @@ package et_colors.board is
 
 	
 	-- CS add argument for brightness
-	-- to the follwing subprograms ?
+	-- to the following subprograms ?
 	
 	procedure set_color_outline (
 		context : in cairo_context;

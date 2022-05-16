@@ -1177,7 +1177,7 @@ is
 		frame : type_frame; -- a single drawing frame. see type in et_kicad.ads
 	
 		-- If the description reveals that there is more than one sheet, we have a hierarchic design. Means we
-		-- need to read follwing sheet sections.
+		-- need to read following sheet sections.
 		-- The sheet_number_current obtained here serves as part of the coordinates of objects found on this sheet.
 		-- The sheet description looks like this:
 

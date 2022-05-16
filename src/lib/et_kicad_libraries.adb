@@ -3487,7 +3487,7 @@ package body et_kicad_libraries is
 			-- If still no match, comp_cursor is empty (no_element).
 			comp_cursor := components.find (component); -- TRANSISTOR_NPN
 
-			-- CS: the follwing should be executed if the import format is kicad_v4:
+			-- CS: the following should be executed if the import format is kicad_v4:
 			if comp_cursor = type_components_library.no_element then
 				comp_cursor := components.find (prepend_tilde (component)); -- ~TRANSISTOR_NPN
 				--CS: log ?
