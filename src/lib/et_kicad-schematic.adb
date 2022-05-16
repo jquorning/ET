@@ -306,7 +306,7 @@ package body et_kicad.schematic is
 			
 			case i is 
 				-- The first character MUST be a valid prefix character.
-				-- If allow_special_charater_in_prefix then the first letter is
+				-- If allow_special_character_in_prefix then the first letter is
 				-- allowed to be a special character. (kicad uses '#' for power symbols)
 				when 1 => 
 					case leading_hash is

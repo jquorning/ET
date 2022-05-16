@@ -159,7 +159,7 @@ package body et_kicad_libraries is
 			
 			case i is 
 				-- The first character MUST be a valid prefix character.
-				-- If allow_special_charater_in_prefix then the first letter is
+				-- If allow_special_character_in_prefix then the first letter is
 				-- allowed to be a special character. (kicad uses '#' for power symbols)
 				when 1 => 
 					case leading_hash is
@@ -1886,7 +1886,7 @@ package body et_kicad_libraries is
 			is
 			-- Reads general text field properties from subfields 3..9 and returns a type_text with 
 			-- the meaning as given in parameter "meaning".
-			-- Checks basic properties of text fields (allowed charactes, text size, aligment, ...)
+			-- Checks basic properties of text fields (allowed characters, text size, aligment, ...)
 			-- NOTE: The contextual validation takes place in procedure check_text_fields.
 				use et_text;
 				use et_text.pac_text_content;
