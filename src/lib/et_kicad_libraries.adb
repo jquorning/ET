@@ -2280,7 +2280,7 @@ package body et_kicad_libraries is
 				-- If a port is to be inserted: Aborts on multiple usage of port or pin names.
 					key		: in pac_unit_name.bounded_string;
 					unit	: in out type_unit_library) is
-					pos		: natural := 0; -- helps to trace the program position where an exception occured
+					pos		: natural := 0; -- helps to trace the program position where an exception occurred
 				begin
 					case element is
 						when polyline =>

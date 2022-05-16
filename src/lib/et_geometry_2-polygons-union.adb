@@ -443,7 +443,7 @@ package body et_geometry_2.polygons.union is
 			----when event: operator_error =>
 				----put_line(exception_message(event));
 			--when event: constraint_error =>
-				----put_line ("Constraint error occured !");
+				----put_line ("Constraint error occurred !");
 				--put_line (exception_information (event));
 				--put_line (exception_message (event));
 
@@ -452,7 +452,7 @@ package body et_geometry_2.polygons.union is
 				--raise;
 				
 			--when others =>
-				--put_line ("Other error occured !");
+				--put_line ("Other error occurred !");
 				--raise;
 		
 	end union;

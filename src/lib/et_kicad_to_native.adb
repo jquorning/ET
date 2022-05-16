@@ -3982,7 +3982,7 @@ package body et_kicad_to_native is
 		exception
 			when event: others =>
 
-				-- output the line of code where the exception occured:
+				-- output the line of code where the exception occurred:
 				show_line (file => gnat.source_info.file, line => gnat.source_info.line);
 				raise;
 		
