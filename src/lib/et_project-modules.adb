@@ -817,7 +817,7 @@ package body et_project.modules is
 	-- - The suubmodule must have been instantiated in the module.
 	-- - The submodule must have an entry in the given assembly variant,
 	--   otherwise the return is no_element.
-	-- If the given variant is an emtpy string (means default variant) the return
+	-- If the given variant is an empty string (means default variant) the return
 	-- is no_element.
 		module	: in pac_generic_modules.cursor; -- the module like motor_driver
 		variant	: in et_general.pac_assembly_variant_name.bounded_string; -- low_cost				

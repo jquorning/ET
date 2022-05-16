@@ -270,7 +270,7 @@ package body et_scripting is
 					delimiter_wrap	=> true, -- strings are enclosed in quotations
 					ifs 			=> space); -- fields are separated by space
 
-				-- we are interested in lines that contain something. emtpy lines are skipped:
+				-- we are interested in lines that contain something. empty lines are skipped:
 				if field_count (cmd) > 0 then
 
 					-- Backup the command to be executed in the script command status
@@ -600,7 +600,7 @@ package body et_scripting is
 					delimiter_wrap	=> true, -- strings are enclosed in quotations
 					ifs 			=> space); -- fields are separated by space
 
-				-- we are interested in lines that contain something. emtpy lines are skipped:
+				-- we are interested in lines that contain something. empty lines are skipped:
 				if field_count (line) > 0 then
 
 					-- execute the line as command

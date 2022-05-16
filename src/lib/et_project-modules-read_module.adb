@@ -6941,7 +6941,7 @@ begin -- read_module
 					delimiter_wrap	=> true, -- strings are enclosed in quotations
 					ifs 			=> space); -- fields are separated by space
 
-				-- we are interested in lines that contain something. emtpy lines are skipped:
+				-- we are interested in lines that contain something. empty lines are skipped:
 				if field_count (line) > 0 then
 					process_line;
 				end if;
