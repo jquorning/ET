@@ -2416,7 +2416,7 @@ is
 		-- Inserts the component in the component list of the module (indicated by module_cursor).
 		-- Components may occur multiple times, which implies they are
 		-- split into units (EAGLE refers to them as "gates").
-		-- Only the first occurence of the component leads to appending it to the component list of the module.
+		-- Only the first occurrence of the component leads to appending it to the component list of the module.
 		
 		-- The component to be inserted gets assembled from the temporarily variables assigned until now.
 		-- Tests if a footprint has been associated with the component.
@@ -3090,7 +3090,7 @@ is
 		check_text_fields (log_threshold + 1);
 		
 		-- Insert component in component list of module. If a component is split
-		-- in units, only the first occurence of it leads to inserting the component.
+		-- in units, only the first occurrence of it leads to inserting the component.
 		-- Nevertheless there are some checks on the unit (see insert_component).
 		insert_component;
 

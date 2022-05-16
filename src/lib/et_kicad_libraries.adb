@@ -921,7 +921,7 @@ package body et_kicad_libraries is
 	-- 	- There can be many library directories to search in.
 
 	-- V5:
-	--	- Looks up the fp-lib-table for the first occurence of the given library name.
+	--	- Looks up the fp-lib-table for the first occurrence of the given library name.
 	--	- The entry in the fp-lib-table in turn provides the full library name (incl. path).
 		
 		lib : type_package_library_name.bounded_string; -- to be returned

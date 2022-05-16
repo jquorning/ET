@@ -126,7 +126,7 @@ package body et_pcb_stack is
 		range_start, range_end : type_signal_layer;
 
 		procedure warning (layer : in type_signal_layer) is begin
-			log (WARNING, "Multiple occurence of layer " & to_string (layer) & " !");
+			log (WARNING, "Multiple occurrence of layer " & to_string (layer) & " !");
 		end;
 		
 		procedure insert_layer is 

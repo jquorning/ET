@@ -5233,7 +5233,7 @@ package body et_kicad.schematic is
 				inserted	=> inserted
 				);
 
--- 			if inserted then -- first occurence of component
+-- 			if inserted then -- first occurrence of component
 				write_component_properties (component => cursor, log_threshold => log_threshold + 1);
 -- 			else -- not inserted
 -- 				null; -- CS: see comment above
@@ -7625,14 +7625,14 @@ package body et_kicad.schematic is
 		
 	
 -- 	function multiple_purpose ( -- CS move to et_schematic or et_project
--- 	-- Returns the number of occurences of components with the given purpose and category.
+-- 	-- Returns the number of occurrences of components with the given purpose and category.
 -- 	-- Example: If there are two connectors with purpose "PWR_IN" the return is 2.
 -- 		category 		: in et_conventions.type_component_category; -- CONNECTOR, LIGHT_EMMITTING_DIODE, ...
 -- 		purpose 		: in et_libraries.type_component_purpose.bounded_string; -- PWR_IN, SYS_FAIL, ...
 -- 		log_threshold 	: in type_log_level)
 -- 		return natural is
 -- 
--- 		occurences : natural := 0; -- to be returned
+-- 		occurrences : natural := 0; -- to be returned
 -- 
 -- 		use et_kicad.type_modules;
 -- 		use et_libraries;
@@ -7659,7 +7659,7 @@ package body et_kicad.schematic is
 -- 					if et_conventions.category (key (component)) = category then -- category must match
 -- 						if element (component).purpose = purpose then -- purpose must match
 -- 							log (et_libraries.to_string (key (component)), level => log_threshold + 1);
--- 							occurences := occurences + 1;
+-- 							occurrences := occurrences + 1;
 -- 						end if;
 -- 					end if;
 -- 				end if;
@@ -7677,7 +7677,7 @@ package body et_kicad.schematic is
 -- 			process		=> locate_component'access);
 -- 
 -- 		-- Show the result of the search:
--- 		if occurences = 0 then
+-- 		if occurrences = 0 then
 -- 			log_indentation_up;
 -- 			log ("none found. very good.", level => log_threshold + 1);
 -- 			log_indentation_down;
@@ -7690,7 +7690,7 @@ package body et_kicad.schematic is
 -- 			-- CS: show the affected components by reference and coordinates
 -- 		end if;
 -- 		
--- 		return occurences;
+-- 		return occurrences;
 -- 	end multiple_purpose;
 
 	

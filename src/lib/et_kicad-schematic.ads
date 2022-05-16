@@ -1002,7 +1002,7 @@ package et_kicad.schematic is
 -- 		log_threshold	: in type_log_level);
 	
 -- 	function multiple_purpose ( -- CS move to et_schematic or et_project
--- 	-- Returns the number of occurences of components with the given purpose and category.
+-- 	-- Returns the number of occurrences of components with the given purpose and category.
 -- 	-- Example: If there are two connectors with purpose "PWR_IN" the return is 2.
 -- 		category		: in conventions.type_component_category; -- CONNECTOR, LIGHT_EMMITTING_DIODE, ...
 -- 		purpose			: in et_libraries.type_component_purpose.bounded_string; -- PWR_IN, SYS_FAIL, ...

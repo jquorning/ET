@@ -8258,7 +8258,7 @@ package body et_schematic_ops is
 					
 					procedure test_inserted is begin
 						if not inserted then
-							log (ERROR, "multiple occurence of device " & to_string (device_name),
+							log (ERROR, "multiple occurrence of device " & to_string (device_name),
 									console => true);
 							raise constraint_error;
 						end if;

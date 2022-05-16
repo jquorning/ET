@@ -374,7 +374,7 @@ package body et_conventions is
 -- 	-- 1. The comparing is conducted first from the right to the left. Means
 -- 	-- module_A and reference_A are assumed to be on the right of the connection
 -- 	-- while module_B and reference_B are assumed on the left.
--- 	-- 2. In module_right all nets having reference_right are located. Each occurence
+-- 	-- 2. In module_right all nets having reference_right are located. Each occurrence
 -- 	-- stands for the port and terminal (pin/pad) of the connector on the right.
 -- 	-- This is based on the netlist of the module (see type_module)
 -- 	-- 3. For each port on the right the connector on the left is probed. The port on the left
@@ -2656,11 +2656,11 @@ package body et_conventions is
 			use pac_geometry_2;
 
 			
-			procedure test_multiple_occurences is begin
+			procedure test_multiple_occurrences is begin
 				if not inserted then
-					log (WARNING, affected_line (element (line_cursor)) & "multiple occurence of assignment ! Entry ignored !");
+					log (WARNING, affected_line (element (line_cursor)) & "multiple occurrence of assignment ! Entry ignored !");
 				end if;
-			end test_multiple_occurences;
+			end test_multiple_occurrences;
 
 			function reduced_check_coverage return string is begin 
 				return " Design check coverage reduced !";
@@ -2713,7 +2713,7 @@ package body et_conventions is
 							-- If entry already in map, this flag goes true. Warning issued later. see below.
 							inserted => inserted);
 
-						test_multiple_occurences;
+						test_multiple_occurrences;
 						next (line_cursor);
 					end loop;
 
@@ -2756,7 +2756,7 @@ package body et_conventions is
 							new_item => abbrevation
 							);
 
-						test_multiple_occurences;
+						test_multiple_occurrences;
 						next (line_cursor);
 					end loop;
 

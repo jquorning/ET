@@ -452,7 +452,7 @@ package body et_device_rw is
 			-- A unit name must occur only once. 
 			-- Make sure the unit_name is not in use by any internal or external units:
 			
-			-- Test occurence in internal units:
+			-- Test occurrence in internal units:
 			if not inserted then
 				log (ERROR, "unit " & to_string (unit_name) 
 					& " already used by another internal unit !", console => true);
@@ -490,7 +490,7 @@ package body et_device_rw is
 			-- A unit name must occur only once. 
 			-- Make sure the unit_name is not in use by any internal or external units:
 
-			-- Test occurence in external units:
+			-- Test occurrence in external units:
 			if not inserted then
 				log (ERROR, "unit name " & to_string (unit_name) 
 					& " already used by another external unit !", console => true);
