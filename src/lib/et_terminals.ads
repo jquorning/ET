@@ -336,7 +336,7 @@ package et_terminals is
 	-- Other CAE systems refer to "pins" or "pads". In order to use only a single word
 	-- we further-on speak about "terminals".
 	-- The name of a terminal may have 10 characters which seems sufficient for now.
-	-- CS: character set, length check, charcter check
+	-- CS: character set, length check, character check
  	terminal_name_length_max : constant natural := 10;
 	package pac_terminal_name is new generic_bounded_length (terminal_name_length_max);
 	use pac_terminal_name;

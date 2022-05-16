@@ -230,11 +230,11 @@ package body et_string_processing is
 
 	function get_field_count (text_in : string) return natural is
 		line_length	:	Natural := text_in'last;	-- length of given text
-		char_pt		:	Natural := 1;				-- charcter pointer (points to character being processed inside the given line)
+		char_pt		:	Natural := 1;				-- character pointer (points to character being processed inside the given line)
 		IFS1		: 	constant Character := ' '; 				-- field separator space
 		IFS2		: 	constant Character := Character'Val(9); -- field separator tabulator
 		field_ct	:	Natural := 0;				-- field counter (the first field found gets number 1 assigned)
-		field_pt	:	Natural := 1;				-- field pointer (points to the charcter being processed inside the current field)
+		field_pt	:	Natural := 1;				-- field pointer (points to the character being processed inside the current field)
 		inside_field:	Boolean := true;			-- true if char_pt points inside a field
 		char_current:	Character;					-- holds current character being processed
 		char_last	:	Character := ' ';			-- holds character processed previous to char_current
@@ -295,11 +295,11 @@ package body et_string_processing is
 	end enclose_in_quotes;
 
 	function enclose_in_quotes (
-		charcter_in	: in character;
+		character_in	: in character;
 		quote		: in character := latin_1.apostrophe) 
 		return string is
 	begin
-		return quote & charcter_in & quote;
+		return quote & character_in & quote;
 	end enclose_in_quotes;
 	
 	function trim_space_in_string (text_in : in string) return string is
@@ -567,7 +567,7 @@ package body et_string_processing is
 						end if;
 
 						-- Exit loop on last character. If this is
-						-- the last charcter of a field, append the field to list.
+						-- the last character of a field, append the field to list.
 						if place = length then
 							if field_entered then
 								append (line (field_start..place));
@@ -591,7 +591,7 @@ package body et_string_processing is
 								-- If a delimiter was found, signal that a wrapped field
 								-- has started. Save the start position of the field content.
 								-- The content starts right after the delimiter.
-								-- If other charcter found, a regular field has started 
+								-- If other character found, a regular field has started 
 								-- where place is pointing at.
 								-- In both cases a field has been entered.
 								if char = delimiter then
@@ -630,7 +630,7 @@ package body et_string_processing is
 						end if;
 
 						-- Exit loop on last character. If this is
-						-- the last charcter of a field, append the field to list.
+						-- the last character of a field, append the field to list.
 						-- If last field was a wrapped field, the position of its last character
 						-- is obtained by subtacting the offset (which is 1 in that case).
 						-- Rais alarm on missing delimiter at end of line (flag wrap_started still set).

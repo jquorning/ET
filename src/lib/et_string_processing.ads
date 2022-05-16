@@ -118,7 +118,7 @@ package et_string_processing is
 	-- Adds heading and trailing quotate to given character.
 	-- NOTE: apostrophe is ', quotation is "
 	function enclose_in_quotes (
-		charcter_in	: in character;
+		character_in	: in character;
 		quote		: in character := latin_1.apostrophe) 
 		return string;
 

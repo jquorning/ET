@@ -184,7 +184,7 @@ package body et_kicad_libraries is
 					if is_in (c, component_prefix_characters) then
 						r.prefix := r.prefix & c;
 					else
-						d := i; -- d holds the position of the charcter after the prefix.
+						d := i; -- d holds the position of the character after the prefix.
 							-- d is requried when reading the component id. see below.
 						exit;
 					end if;
