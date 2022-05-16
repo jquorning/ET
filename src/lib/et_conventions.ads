@@ -149,8 +149,8 @@ package et_conventions is
 		INTEGRATED_CIRCUIT,
 		JUMPER,					-- a component that allows tieing nets via a removable bridge
 		KEYPAD,					-- array of push buttons, keys, switches, ...
-		LIGHT_EMMITTING_DIODE,	-- an LED, LASER-diode, IRED-LED, ...
-		LIGHT_EMMITTING_DIODE_ARRAY,
+		LIGHT_EMITTING_DIODE,	-- an LED, LASER-diode, IRED-LED, ...
+		LIGHT_EMITTING_DIODE_ARRAY,
 		LOUDSPEAKER,
 		MICROPHONE,
 		NETCHANGER,				-- ties two nets together

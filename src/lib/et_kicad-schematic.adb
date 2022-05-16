@@ -7569,7 +7569,7 @@ package body et_kicad.schematic is
 
 -- 	procedure multiple_purpose_warning ( -- CS move to et_schematic or et_project
 -- 	-- Outputs a warning message on multiple usage of a purpose of a component category.
--- 		category		: in et_conventions.type_component_category; -- CONNECTOR, LIGHT_EMMITTING_DIODE, ...
+-- 		category		: in et_conventions.type_component_category; -- CONNECTOR, LIGHT_EMITTING_DIODE, ...
 -- 		purpose 		: in et_libraries.type_component_purpose.bounded_string; -- PWR_IN, SYS_FAIL, ...
 -- 		log_threshold 	: in type_log_level) is
 -- 		
@@ -7627,7 +7627,7 @@ package body et_kicad.schematic is
 -- 	function multiple_purpose ( -- CS move to et_schematic or et_project
 -- 	-- Returns the number of occurences of components with the given purpose and category.
 -- 	-- Example: If there are two connectors with purpose "PWR_IN" the return is 2.
--- 		category 		: in et_conventions.type_component_category; -- CONNECTOR, LIGHT_EMMITTING_DIODE, ...
+-- 		category 		: in et_conventions.type_component_category; -- CONNECTOR, LIGHT_EMITTING_DIODE, ...
 -- 		purpose 		: in et_libraries.type_component_purpose.bounded_string; -- PWR_IN, SYS_FAIL, ...
 -- 		log_threshold 	: in type_log_level)
 -- 		return natural is
@@ -7750,7 +7750,7 @@ package body et_kicad.schematic is
 -- 							when INDUCTOR | INDUCTOR_ADJUSTABLE 	=> et_schematic.statistics_set (et_schematic.INDUCTORS);
 -- 							when INTEGRATED_CIRCUIT 				=> et_schematic.statistics_set (et_schematic.INTEGRATED_CIRCUITS);
 -- 							when JUMPER 							=> et_schematic.statistics_set (et_schematic.JUMPERS);
--- 							when LIGHT_EMMITTING_DIODE | LIGHT_EMMITTING_DIODE_ARRAY 
+-- 							when LIGHT_EMITTING_DIODE | LIGHT_EMITTING_DIODE_ARRAY 
 -- 																	=> et_schematic.statistics_set (et_schematic.LEDS);
 -- -- 							when NETCHANGER 						=> et_schematic.statistics_set (et_schematic.NETCHANGERS);
 -- 							when RELAY 								=> et_schematic.statistics_set (et_schematic.RELAYS);

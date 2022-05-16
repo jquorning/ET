@@ -2463,8 +2463,8 @@ package body et_conventions is
 		put_line ("L   " & to_string (INDUCTOR));
 		put_line ("LA  " & to_string (INDUCTOR_ADJUSTABLE));
 		put_line ("LS  " & to_string (LOUDSPEAKER));
-		put_line ("LED " & to_string (LIGHT_EMMITTING_DIODE));
-		put_line ("LDA " & to_string (LIGHT_EMMITTING_DIODE_ARRAY));
+		put_line ("LED " & to_string (LIGHT_EMITTING_DIODE));
+		put_line ("LDA " & to_string (LIGHT_EMITTING_DIODE_ARRAY));
 		put_line ("M   " & to_string (MOTOR));
 		put_line ("MIC " & to_string (MICROPHONE));
 		put_line ("N   " & to_string (NETCHANGER));
@@ -2539,8 +2539,8 @@ package body et_conventions is
 		put_line (to_string (INDUCTOR_ADJUSTABLE));
 		put_line (to_string (JUMPER));
 		put_line (to_string (KEYPAD));
-		put_line (to_string (LIGHT_EMMITTING_DIODE));
-		put_line (to_string (LIGHT_EMMITTING_DIODE_ARRAY));
+		put_line (to_string (LIGHT_EMITTING_DIODE));
+		put_line (to_string (LIGHT_EMITTING_DIODE_ARRAY));
 		put_line (to_string (RESISTOR_ADJUSTABLE));
 		put_line (to_string (RESISTOR_PHOTO));
 		put_line (to_string (POTENTIOMETER));
