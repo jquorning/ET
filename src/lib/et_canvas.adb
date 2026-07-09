@@ -1148,6 +1148,13 @@ package body et_canvas is
 		-- The right vbox shall expand upon resizing the main window:
 		-- box_h0.pack_start (box_v2);
 
+		-- Buttons
+		gtk_new_vbox (box_v2);
+		box_h0.pack_start (box_v2, expand => false);
+		et_gtk_buttons.gtk_buttons_new (buttons);
+		box_v2.pack_start (buttons, expand => false);
+		box_h0.pack_start (box_v2, expand => false);
+
 		--------------------------------
 
 		-- BOX FOR CONSOLE:
@@ -3010,67 +3017,6 @@ package body et_canvas is
 	
 
 	
--- BUTTONS:
-
-	procedure create_buttons is begin
-		put_line ("create_buttons");
-		
-		gtk_new_vbox (box_v2);
-		box_h0.pack_start (box_v2, expand => false);
-
-
-		gtk_new (buttons_table, rows => 5, columns => 1, 
-			homogeneous => false);
-		-- table.set_col_spacings (50);
-		-- table_coordinates.set_border_width (10);
-
-
-		gtk_new (button_zoom_fit, "ZOOM FIT");
-		gtk_new (button_zoom_area, "ZOOM AREA");
-		gtk_new (button_add, "ADD");
-		gtk_new (button_delete, "DELETE");
-		gtk_new (button_move, "MOVE");
-		gtk_new (button_export, "EXPORT");
-		-- CS add other buttons
-		
-
-		
-		-- The table shall not expand downward:
-		box_v2.pack_start (buttons_table, expand => false);
-
-		
-		buttons_table.attach (button_zoom_fit,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 0, bottom_attach => 1);
-
-		buttons_table.attach (button_zoom_area,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 1, bottom_attach => 2);
-		
-		buttons_table.attach (button_add,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 2, bottom_attach => 3);
-
-		buttons_table.attach (button_delete,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 3, bottom_attach => 4);
-
-		buttons_table.attach (button_move,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 4, bottom_attach => 5);
-
-		buttons_table.attach (button_export,
-			left_attach => 0, right_attach => 1,
-			top_attach  => 5, bottom_attach => 6);
-				
-	end create_buttons;	
-
-
-
-
-
-	
-	
 -- CONSOLE AND STATUS:
 
 
@@ -3143,58 +3089,9 @@ package body et_canvas is
 	
 -----------------------------------------------------------------------	
 -- INITIALISATION AND CALLBACKS:
-	
-
-	
-	procedure cb_add (
-		button : access gtk_button_record'class)
-	is begin
-		put_line ("cb_add");
-		-- add_object;
-
-		-- Redraw the canvas:
-		refresh;
-	end cb_add;
-
-
-	
-	procedure cb_delete (
-		button : access gtk_button_record'class)
-	is begin
-		put_line ("cb_delete");
-		-- delete_object;
-
-		-- Redraw the canvas:
-		refresh;
-	end cb_delete;
-
-
-	
-	procedure cb_move (
-		button : access gtk_button_record'class)
-	is begin
-		put_line ("cb_move");
-		-- CS
-	end cb_move;
-
-	
-
-	procedure cb_export (
-		button : access gtk_button_record'class)
-	is
-	begin
-		put_line ("cb_export");
-		-- CS
-	end cb_export;
 
 
 
-
-
-	
-	
-	
-	
 -- MAIN WINDOW:
 	
 	procedure cb_terminate (
@@ -3362,34 +3259,6 @@ package body et_canvas is
 
 
 	
-	procedure set_up_command_buttons is
-	begin
-		put_line ("set_up_command_buttons (general)");
-
-		create_buttons;
-
-		-- Connect button signals with subprograms:
-		
-		--button_add.on_clicked (cb_add'access);
-		button_add.on_clicked (access_cb_add);
-		
-		--button_delete.on_clicked (cb_delete'access);
-		button_delete.on_clicked (access_cb_delete);
-		
-		-- button_move.on_clicked (cb_move'access);
-		button_move.on_clicked (access_cb_move);
-		
-		-- button_export.on_clicked (cb_export'access);
-		button_export.on_clicked (access_cb_export);
-
-	end set_up_command_buttons;
-
-	
-
-
-
-
-	
 	procedure set_up_main_window is begin
 		-- put_line ("set_up_main_window (general)");
 		log (text => "set_up_main_window (general)", level => log_threshold);
@@ -3423,7 +3292,7 @@ package body et_canvas is
 		-- Not used:
 		-- main_window.on_activate_focus (cb_window_focus'access);
 
-		set_up_command_buttons;
+		et_gui_buttons.set_up_command_buttons (buttons);
 
 	end set_up_main_window;
 

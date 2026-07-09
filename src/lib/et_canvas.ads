@@ -93,7 +93,8 @@ with et_text_vectorized;
 with et_mirroring;				use et_mirroring;
 with et_colors;					use et_colors;
 
-
+with et_gtk_buttons;
+with et_gui_buttons;
 
 generic
 	canvas_name : string; -- schematic, board, package, device, symbol, ...
@@ -673,7 +674,7 @@ package et_canvas is
 	box_v1		: gtk_vbox;		-- for coord. display, verb/noun
 	separator	: gtk_separator;
 	box_v2		: gtk_vbox;		-- for command buttons
-
+	buttons		: et_gtk_buttons.gtk_buttons;
 
 	-- inside box_v0:
 	box_v3 		: gtk_hbox;		-- for console
@@ -1211,25 +1212,6 @@ package et_canvas is
 	
 
 
--- BUTTONS:
-
-	buttons_table		: gtk_table;
-	
-	button_zoom_fit		: gtk_button;
-	button_zoom_area	: gtk_button;
-	button_move			: gtk_button;
-	button_add			: gtk_button;
-	button_delete		: gtk_button;
-	button_export		: gtk_button;
-	
-	-- This procedure creates the buttons:
-	procedure create_buttons;
-
-
-
-
-	
-	
 -- CONSOLE AND STATUS:
 
 	label_console	: gtk_label;
@@ -1775,48 +1757,6 @@ private
 
 	
 -- CALLBACKS:
-
-	-- BUTTONS:
-
-	
-	-- This callback procedure is called each time the 
-	-- button "add" is clicked.
-	procedure cb_add (
-		button : access gtk_button_record'class);
-
-	access_cb_add : constant cb_gtk_button_void := cb_add'access;
-
-	
-	
-	-- This callback procedure is called each time the 
-	-- button "delete is clicked.
-	procedure cb_delete (
-		button : access gtk_button_record'class);
-
-	access_cb_delete : constant cb_gtk_button_void := cb_delete'access;
-
-
-	
-	
-	-- This callback procedure is called each time the 
-	-- button "move" is clicked.
-	procedure cb_move (
-		button : access gtk_button_record'class);
-
-	access_cb_move: constant cb_gtk_button_void := cb_move'access;
-
-	
-	-- This callback procedure is called each time the 
-	-- button "export" is clicked:
-	procedure cb_export (
-		button : access gtk_button_record'class);
-
-	access_cb_export : constant cb_gtk_button_void := cb_export'access;
-
-
-
-
-	
 
 -- MAIN WINDOW:
 

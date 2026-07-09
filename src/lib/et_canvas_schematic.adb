@@ -89,6 +89,7 @@ with et_canvas_schematic_preliminary_object;
 with et_cmd_sts;						use et_cmd_sts;
 with et_script_processor;
 
+with et_gui_buttons;
 
 package body et_canvas_schematic is
 
@@ -217,15 +218,15 @@ package body et_canvas_schematic is
 	
 
 	procedure set_up_command_buttons is
+		use et_gui_buttons;
 	begin
 		put_line ("set_up_command_buttons (schematic)");
 
 		-- Connect button signals with subprograms:
-		
-		button_zoom_fit.on_clicked (cb_zoom_to_fit'access);
-		-- button_zoom_fit.on_clicked (access_cb_zoom_to_fit);		
 
-		button_zoom_area.on_clicked (cb_zoom_area'access);
+		on_zoom_fit_clicked (buttons, cb_zoom_to_fit'access);		
+
+		on_zoom_area_clicked (buttons, cb_zoom_area'access);
 		
 	end set_up_command_buttons;
 
